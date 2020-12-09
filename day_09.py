@@ -1,4 +1,5 @@
-content = [int(x.strip()) for x in open("/media/veracrypt3/Developement/Python/AdventOfCode2020/text_09.txt").readlines()]
+content = [int(x.strip()) for x in
+           open("/media/veracrypt3/Developement/Python/AdventOfCode2020/text_09.txt").readlines()]
 
 result = 0
 preamble = [int(content[i]) for i in range(25)]
@@ -20,3 +21,11 @@ for i in range(25, len(content) - 25):
     preamble.append(summe)
 
 print(result)
+
+for idx, i in enumerate(content):
+    lst = [i]
+    for r in content[idx + 1:]:
+        lst.append(r)
+        if sum(lst) == result:
+            print(min(lst) + max(lst))
+            exit()
