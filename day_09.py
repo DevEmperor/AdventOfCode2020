@@ -1,5 +1,4 @@
-content = [int(x.strip()) for x in
-           open("/media/veracrypt3/Developement/Python/AdventOfCode2020/text_09.txt").readlines()]
+content = [int(x.strip()) for x in open("/media/veracrypt3/Developement/Python/AdventOfCode2020/text_09.txt").readlines()]
 
 result = 0
 preamble = [int(content[i]) for i in range(25)]
